@@ -8,15 +8,17 @@ automatic commiting to Gerrit and pushing/downloading to/from Crowdin.
 
 Prerequisites
 -------------
-The Ruby variant of crowdin-cli is required for this to work.
+Ruby variant of crowdin-cli is required for this to work
 
     \curl -sSL https://get.rvm.io | bash -s stable --ruby
     source /home/your_username/.rvm/scripts/rvm # Add this to your .bashrc file!
     rvm all do gem install crowdin-cli
 
-python-git is used for Git integration.
+python and python git is required for Git integration
 
-    sudo apt-get install python-git
+    sudo pacman -S python2-virtualenv
+
+    sudo pacman -S python2-gitpython
 
 Executing
 ---------
