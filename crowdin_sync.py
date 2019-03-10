@@ -177,27 +177,6 @@ def download_crowdin(base_path, branch, xml, username, no_download=False):
                'download', '--ignore-match'])
 
 
-    print('\nRemoving useless empty translation files')
-    empty_contents = {
-        '<resources/>',
-        '<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"/>',
-        ('<resources xmlns:android='
-         '"http://schemas.android.com/apk/res/android"/>'),
-        ('<resources xmlns:android="http://schemas.android.com/apk/res/android"'
-         ' xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"/>'),
-        ('<resources xmlns:tools="http://schemas.android.com/tools"'
-         ' xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"/>')
-    }
-    xf = None
-    for xml_file in find_xml(base_path):
-        xf = open(xml_file).read()
-        for line in empty_contents:
-            if line in xf:
-                print('Removing ' + xml_file)
-                os.remove(xml_file)
-                break
-    del xf
-
     print('\nCreating a list of pushable translations')
     # Get all files that Crowdin pushed
     paths = []
@@ -211,7 +190,7 @@ def download_crowdin(base_path, branch, xml, username, no_download=False):
             paths.append(p.replace('/%s' % branch, ''))
 
     print('\nUploading translations to Gerrit')
-    xml_android = load_xml(x='%s/manifest/o8x_default.xml' % base_path)
+    xml_android = load_xml(x='%s/manifest/p9x_default.xml' % base_path)
     items = xml_android.getElementsByTagName('project')
     #items = [x for sub in xml for x in sub.getElementsByTagName('project')]
     all_projects = []
@@ -278,7 +257,7 @@ def main():
     if not check_dependencies():
         sys.exit(1)
 
-    xml_android = load_xml(x='%s/manifest/o8x_default.xml' % base_path)
+    xml_android = load_xml(x='%s/manifest/p9x_default.xml' % base_path)
     if xml_android is None:
         sys.exit(1)
 
