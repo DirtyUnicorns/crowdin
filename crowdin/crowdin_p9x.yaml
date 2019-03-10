@@ -1,4 +1,4 @@
-# crowdin-o8x.yaml
+# crowdin-p9x.yaml
 #
 # Crowdin configuration file for DU
 #
@@ -97,7 +97,7 @@ files:
     languages_mapping: *anchor
 
   -
-    source:      '/packages/apps/Dialer/java/com/android/dialer/app/res/values/du_strings.xml'
+    source:      '/packages/apps/CustomDoze/res/values/strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
@@ -108,30 +108,5 @@ files:
 
   -
     source:      '/packages/apps/DU-Updater/app/src/main/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
-  -
-    source:      '/packages/apps/DUI/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
-  -
-    source:      '/packages/apps/Launcher3/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
-  -
-    source:      '/packages/apps/Messaging/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
-  -
-    source:      '/packages/apps/PackageInstaller/res/values/du_strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
-  -
-    source:      '/packages/apps/Settings/res/values/du_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
