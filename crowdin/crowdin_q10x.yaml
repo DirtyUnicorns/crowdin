@@ -1,8 +1,8 @@
-# crowdin-p9x.yaml
+# crowdin-q10x.yaml
 #
 # Crowdin configuration file for DU
 #
-# Copyright (C) 2014 The Dirty Unicorns Project
+# Copyright (C) 2014-2020 The Dirty Unicorns Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -92,21 +92,16 @@ files:
         zu: zu
 
   -
-    source:      '/packages/apps/Changelog/app/src/main/res/values/strings.xml'
+    source:      '/packages/apps/DU-Changelog/app/src/main/res/values/strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
   -
-    source:      '/packages/apps/CustomDoze/res/values/strings.xml'
+    source:      '/packages/apps/DU-Themes/res/values/strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
   -
     source:      '/packages/apps/DU-Tweaks/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
-  -
-    source:      '/packages/apps/DU-Updater/app/src/main/res/values/strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
